@@ -1,4 +1,6 @@
-Project Euler Solutions in C
-============================
+Project Euler Solutions
+=======================
 
-This is a repository for my [Project Euler](https://projecteuler.net/) Solutions. I use C.
+This is a repository for my [Project Euler](https://projecteuler.net/) Solutions.
+
+Code licensed under MIT.
