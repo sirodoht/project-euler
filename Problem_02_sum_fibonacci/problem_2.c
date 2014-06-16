@@ -1,15 +1,16 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int fibf(int n)
+int recursive_fib(int n)
 {
-    if(n<2)
+    if(n < 2)
         return n;
     else
-        return fibf(n-1)+fibf(n-2);
+        return recursive_fib(n-1) + recursive_fib(n-2);
 }
 
-/*int fasterthanslowfibf(int n)
+/*
+int fasterthanslowfibf(int n)
 {
     int i;
     long int F[100];
@@ -25,22 +26,23 @@ int fibf(int n)
     return F[n];
 }*/
 
-main()
+int main(void)
 {
-    int i,cfib,s=0;
-    
+    int i, fib_counter;
+    int sum = 0;
+
     /*
     for(i=0;i<100;i++)
-        printf("%d fib = %d\n", i, fibf(i));
+      printf("%d fib = %d\n", i, recursive_fib(i));
     */
-    for(i=0;s<4000000;i++)
-        {
-            cfib=fibf(i);
-            if(cfib%2==0)
-                s+=cfib;
-        }
-    
-    printf("S Fib = %d\n", s);
-    system("PAUSE");
-}
+    for(i = 0; sum < 4000000; i++)
+    {
+        fib_counter = recursive_fib(i);
+        if(fib_counter % 2 == 0)
+            sum += fib_counter;
+    }
 
+    printf("Result = %d\n", sum);
+
+    return 0;
+}

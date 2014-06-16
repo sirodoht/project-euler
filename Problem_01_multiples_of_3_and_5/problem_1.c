@@ -1,21 +1,22 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-main()
+int main(void)
 {
-    int i,S=0;
-    
-    for(i=0;i<1000;i++)
+    int i;
+    int sum = 0;
+
+    for(i = 0; i < 1000; i++)
     {
         printf("Current i = %d\n", i);
-        if(i%3==0 || i%5==0)
+        if(i % 3 == 0 || i % 5 == 0)
         {
-            S+=i;
-            printf("Current S = %d\n", S);
+            sum += i;
+            printf("Current Sum = %d\n", sum);
         }
     }
-    
-    printf("Sum = %d\n",S);
-    system("PAUSE");
+
+    printf("Sum = %d\n", sum);
+
+    return 0;
 }
-    

@@ -4,40 +4,38 @@
 
 int main(void)
 {
-    long long n, res, m;
-    int f, sf, primeness;
-    
+    long long n, result, m;
+    int flag, sf, primeness;
+
     //printf("Enter a number: ");
     //scanf("%ld", &m);
-    m=600851475143;
-    n=ceil(sqrt(m));
-    
-    primeness=0;
+    m = 600851475143;
+    n = ceil(sqrt(m));
+
+    primeness = 0;
     while(!primeness)
     {
-        f=1;
-        while(f)
+        flag = 1;
+        while(flag)
         {
-            if(m%n==0)
+            if(m % n == 0)
             {
-                res=n;
-                f=0;
+                result = n;
+                flag = 0;
             }
             n--;
         }
-        
-        sf=2;
-        while(res%sf!=0)
-            sf++;
-        if(sf>=2 && sf<res)
-            primeness=0;
-        else
-            primeness=1;
-    }
-    
-    printf("Largest Prime Factor = %ld\n",res);
 
-    system("PAUSE");
+        sf = 2;
+        while(result % sf != 0)
+            sf++;
+        if(sf >= 2 && sf < res)
+            primeness = 0;
+        else
+            primeness = 1;
+    }
+
+    printf("Largest Prime Factor = %ld\n", result);
+
     return 0;
 }
-
