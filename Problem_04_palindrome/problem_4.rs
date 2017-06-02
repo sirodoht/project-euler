@@ -20,9 +20,9 @@ fn main() {
 
     let time_start = SystemTime::now();
 
-    for i in (100..1000).rev() {
-        for j in (100..1000).rev() {
-            if i > j {  // we have searched for that in i*j (this is j*i)
+    for i in 100..1000 {
+        for j in 100..1000 {
+            if i < j {  // we have searched for that in i*j (this is j*i)
                 break
             }
 
