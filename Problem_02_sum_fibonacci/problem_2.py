@@ -22,4 +22,4 @@ print("Result:", sum)
 
 time_b = datetime.datetime.now()
 
-print("Time elapsed:", time_b-time_a)
+print("Microseconds elapsed:", time_b-time_a)
