@@ -18,6 +18,9 @@ largest_palindrome = -1
 for i in range(100, 1000):
     #print("i:", i)
     for j in range(100, 1000):
+        if i < j:  # we have searched for that in i*j (this is j*i)
+            break
+
         product = i * j
         if is_palindrome(product) and product > largest_palindrome:
             largest_palindrome = product
