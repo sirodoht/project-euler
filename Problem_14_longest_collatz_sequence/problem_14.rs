@@ -14,7 +14,7 @@ fn main() {
     let mut max_terms: u32 = 0;
     let mut max_terms_number: u32 = 0;
 
-    for i in (2..1_000_000).rev() {
+    for i in 2..1_000_001 {
         let mut current_terms: u32 = 0;
         let mut result: u32 = i;
         while result != 1 {
