@@ -1,39 +1,30 @@
 #include <stdio.h>
 #include <stdlib.h>
-#define limit 20
+#define LIMIT 20
 
-int main(void)
-{
-    int j, flag, counter, res;
-    long long int i;
-    
-    //i=12252240;
-    i=1;
-    flag=1;
-    while(flag)
-    {
-        if(i%10!=0 || i%2!=0)
-        {
-            i++;
-            continue;
+int main(void) {
+    int result = 0;
+
+    int counter = 2;
+    while(!result) {
+        int possible_result_bool = 1;
+        int inner_counter = LIMIT;
+        while (possible_result_bool && inner_counter > 0) {
+            if (counter % inner_counter != 0) {
+                possible_result_bool = 0;
+                break;
+            }
+            inner_counter--;
         }
-        
-        counter=0;
-        for(j=1;j<=limit;j++)
-            if(i%j==0)
-                counter++;
-        
-        if(counter==limit)
-        {
-            res=i;
-            flag=0;
+
+        if (possible_result_bool) {
+            result = counter;
         }
-        
-        i++;
-    }            
-    
-    printf("Result = %d\n", res);
-    
-    system("PAUSE");
+
+        counter++;
+    }
+
+    printf("Result = %d\n", result);
+
     return 0;
 }
